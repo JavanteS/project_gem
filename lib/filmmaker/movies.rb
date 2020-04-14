@@ -16,4 +16,9 @@ class Movie
         self.all.select do |movie| movie.name == name
         end 
     end
+
+    def self.find_info_by_number(input)
+        input = input.to_i
+        self.all[input - 1]
+    end 
 end 

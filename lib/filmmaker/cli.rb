@@ -14,7 +14,11 @@ class Cli
 
                 list_movies
             
-            #elsif input.to_i 
+            elsif input > 0  #input < Movie.all.length
+             binding.pry
+             summary = Movie.find_info_by_number(input.to_i)
+             #print list_info(summary)
+
             
             else 
                 puts "sorry please try again"
@@ -37,7 +41,9 @@ class Cli
      
     end 
 
-    def list_info(input)
+    def list_info(summary)
+
+        
     end 
     
 end
