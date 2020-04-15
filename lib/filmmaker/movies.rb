@@ -3,10 +3,11 @@ class Movie
 
     @@all = []
 
-    def initialize(name:, description:)
+    def initialize(name:, description:, year:)
         @name = name 
         @description = description
         @@all << self 
+        @year = year 
 
     end 
 

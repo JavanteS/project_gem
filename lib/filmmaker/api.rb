@@ -5,7 +5,7 @@ class Api
         response = Net::HTTP.get(URI(url))
         movies = JSON.parse(response)
         #binding.pry
-        movies.each { |m| Movie.new(name: m["title"], description: m["description"])}
+        movies.each { |m| Movie.new(name: m["title"], description: m["description"], year: m["release_date"])}
     end 
 
     

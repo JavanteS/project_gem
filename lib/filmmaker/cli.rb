@@ -17,7 +17,7 @@ class Cli
              
             
             else 
-                puts "Sorry, invalid entry.  Please try again"
+                puts "Sorry, invalid entry.  Please, try again"
             
             end
                 puts ""
@@ -35,22 +35,22 @@ class Cli
     end 
 
     def prompt_one
-        puts "Here is the list of Studio G
-        hibli's films"
+        puts ""
+        puts "Here is the list of Studio Ghibli's films"
         puts "-------------------"
     end 
 
     def list_movies
 
-    Movie.all.each.with_index(1) do |movie, index| puts "#{index}. #{movie.name}"
-
-    end 
-     
-    end 
+    Movie.all.each.with_index(1) do |movie, index| 
+                puts "#{index}. #{movie.name}"
+         end 
+     end 
 
     def list_info(movie)
+
         puts  "Title: #{movie.name}"
-        puts ""
+        puts " Release date: #{movie.year}"
         puts  "Description: #{movie.description}"
         puts "______________"
     end 
