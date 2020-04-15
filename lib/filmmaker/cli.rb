@@ -1,37 +1,44 @@
 class Cli
      
     def run 
-        puts "Hello! Welcome to Studio Ghibli."
-        puts "Please type 'films' to see Studio Ghibli's films."
-        puts "Type 'exit' to leave the app"
-        #binding.pry
-        #list_movies(Movie.all)
+        prompt
         input = gets.strip.downcase
         Api.get_films
         while input != "exit" do
             
             if input == "films"
-
+                prompt_one
                 list_movies
-            
-            elsif input > 0  #input < Movie.all.length
-             binding.pry
-             summary = Movie.find_info_by_number(input.to_i)
-             #print list_info(summary)
-
+        
+            elsif input.to_i > 0  && input.to_i < Movie.all.length
+             
+             movie = Movie.find_info_by_number(input)
+             list_info(movie)
+             
             
             else 
-                puts "sorry please try again"
+                puts "Sorry, invalid entry.  Please try again"
             
             end
-            puts "what movie would you like see? Please pick a number to continue."
-            input = gets.strip.downcase
+                puts ""
+                puts "Pick a number to read the movie's description. To see the list again, type 'films'.  Type exit to leave."
+                input = gets.strip.downcase
         end
          puts "Bye!"
     end 
 
 
+    def prompt
+        puts "Hello! Welcome to Studio Ghibli."
+        puts "Please type 'films' to see Studio Ghibli's films."
+        puts "Type 'exit' to leave the app"
+    end 
 
+    def prompt_one
+        puts "Here is the list of Studio G
+        hibli's films"
+        puts "-------------------"
+    end 
 
     def list_movies
 
@@ -41,9 +48,11 @@ class Cli
      
     end 
 
-    def list_info(summary)
-
-        
+    def list_info(movie)
+        puts  "Title: #{movie.name}"
+        puts ""
+        puts  "Description: #{movie.description}"
+        puts "______________"
     end 
     
 end
