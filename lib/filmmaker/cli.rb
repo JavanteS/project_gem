@@ -4,10 +4,11 @@ class Cli
         prompt
         input = gets.strip.downcase
         Api.get_films
+        #binding.pry 
         while input != "exit" do
             
             if input == "films"
-                prompt_one
+                prompt_two
                 list_movies
         
             elsif input.to_i > 0  && input.to_i < Movie.all.length
@@ -34,17 +35,18 @@ class Cli
         puts "Type 'exit' to leave the app"
     end 
 
-    def prompt_one
+    def prompt_two
         puts ""
         puts "Here is the list of Studio Ghibli's films"
         puts "-------------------"
     end 
 
     def list_movies
-
-    Movie.all.each.with_index(1) do |movie, index| 
-                puts "#{index}. #{movie.name}"
-         end 
+        sorted = Movie.all.sort_by { |movie| movie.name}
+        sorted.each.with_index(1) { |movie, index| puts "#{index}. #{movie.name}"}
+        #Movie.all.each.with_index(1) do |movie, index| 
+                #puts "#{index}. #{movie.name}"
+         #end 
      end 
 
     def list_info(movie)
