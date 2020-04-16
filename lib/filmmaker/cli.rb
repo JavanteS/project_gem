@@ -4,6 +4,7 @@ class Cli
         prompt
         input = gets.strip.downcase
         Api.get_films
+        Movie.all.sort_by! { |movie| movie.name}
         #binding.pry 
         while input != "exit" do
             
@@ -11,10 +12,10 @@ class Cli
                 prompt_two
                 list_movies
         
-            elsif input.to_i > 0  && input.to_i < Movie.all.length
+            elsif input.to_i > 0  && input.to_i <= Movie.all.length
              
-             movie = Movie.find_info_by_number(input)
-             list_info(movie)
+                  movie = Movie.find_info_by_number(input)
+                  list_info(movie)
              
             
             else 
@@ -45,20 +46,20 @@ class Cli
     end 
 
     def list_movies
-        sorted = Movie.all.sort_by { |movie| movie.name}
-        sorted.each.with_index(1) { |movie, index| puts "#{index}. #{movie.name}"}
-        #Movie.all.each.with_index(1) do |movie, index| 
-                #puts "#{index}. #{movie.name}"
-         #end 
+        
+        #sorted.each.with_index(1) { |movie, index| puts "#{index}. #{movie.name}"}
+        Movie.all.each.with_index(1) do |movie, index| 
+                puts "#{index}. #{movie.name}"
+         end 
      end 
 
     def list_info(movie)
-
+        puts ""
         puts "Title: #{movie.name}"
         puts "Release date: #{movie.year}"
+        puts "Rating: #{movie.rating}"
         puts ""
         puts "Description: #{movie.description}"
-        puts "Rating: #{movie.rating}"
         
         puts "______________"
     end 
