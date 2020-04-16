@@ -53,6 +53,7 @@ class Cli
         puts "Release date: #{movie.year}"
         puts ""
         puts "Description: #{movie.description}"
+        puts "Rating: #{movie.rating}"
         
         puts "______________"
     end 
