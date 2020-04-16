@@ -49,9 +49,11 @@ class Cli
 
     def list_info(movie)
 
-        puts  "Title: #{movie.name}"
-        puts " Release date: #{movie.year}"
-        puts  "Description: #{movie.description}"
+        puts "Title: #{movie.name}"
+        puts "Release date: #{movie.year}"
+        puts ""
+        puts "Description: #{movie.description}"
+        
         puts "______________"
     end 
     
