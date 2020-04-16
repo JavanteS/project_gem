@@ -18,14 +18,17 @@ class Cli
              
             
             else 
+                puts ""
+                puts "Processing entry..."
+                sleep 1
                 puts "Sorry, invalid entry.  Please, try again"
             
             end
                 puts ""
-                puts "Pick a number to read the movie's description. To see the list again, type 'films'.  Type exit to leave."
+                puts "Pick a number to read the movie's description. To see the list of films again, type 'films'. Type 'exit' to leave."
                 input = gets.strip.downcase
         end
-         puts "Bye!"
+         puts "Goodbye!"
     end 
 
 
