@@ -5,7 +5,6 @@ class Cli
         input = gets.strip.downcase
         Api.get_films
         Movie.all.sort_by! { |movie| movie.name}
-        #binding.pry 
         while input != "exit" do
             
             if input == "films"
@@ -20,8 +19,6 @@ class Cli
             
             else 
                 puts ""
-                puts "Processing entry..."
-                sleep 1
                 puts "Sorry, invalid entry.  Please, try again"
             
             end
