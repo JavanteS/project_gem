@@ -22,11 +22,11 @@ Built with
 	
 Contributing
 
-    Please see Code of Conduct file for details. 
+    	 Please see Code of Conduct file for details. 
 
 License
 
- 	   This project is licensed under the MIT License – see the LICENSE file for details.
+ 	 This project is licensed under the MIT License – see the LICENSE file for details.
 
 Acknowledgments
         Studio Ghibli
