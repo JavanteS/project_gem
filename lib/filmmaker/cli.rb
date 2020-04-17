@@ -15,6 +15,7 @@ class Cli
              
                   movie = Movie.find_info_by_number(input)
                   list_info(movie)
+                  
              
             
             else 
@@ -22,8 +23,9 @@ class Cli
                 puts "Sorry, invalid entry.  Please, try again".red
             
             end
+                
                 puts ""
-                puts "Pick a number to read the movie's description. To see the list of films again, type 'films'. Type 'exit' to leave."
+                puts "Pick a number to read the movie's description. To see the list of films again, type 'films'. Type 'exit' to leave.".green
                 input = gets.strip.downcase
         end
          puts "Goodbye!"
@@ -56,10 +58,11 @@ class Cli
         puts "Release date: #{movie.year}"
         puts "Rating: #{movie.rating}"
         puts "Director: #{movie.director}"
+        puts "______________________________"
         puts ""
         puts "Description: #{movie.description}"
         
-        puts "______________"
+        puts "______________________________"
     end 
     
 end
