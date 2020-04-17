@@ -30,7 +30,7 @@ class Cli
     def prompt
         puts "Hello! Welcome to Studio Ghibli.".green
         puts "Please type 'films' to see Studio Ghibli's films."
-        puts "Type 'exit' to leave the app"
+        puts "Type 'exit' to leave the app."
     end 
 
     def prompt_two
