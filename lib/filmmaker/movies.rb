@@ -1,13 +1,14 @@
 class Movie
-    attr_accessor :name , :description, :year, :rating
+    attr_accessor :name , :description, :year, :rating, :director
 
     @@all = []
 
-    def initialize(name:, description:, year:, rating:)
+    def initialize(name:, description:, year:, rating:, director:)
         @name = name 
         @description = description
         @rating = rating 
         @year = year 
+        @director = director
         @@all << self
     end 
 
