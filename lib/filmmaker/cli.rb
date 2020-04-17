@@ -55,6 +55,7 @@ class Cli
         puts "Title: #{movie.name}"
         puts "Release date: #{movie.year}"
         puts "Rating: #{movie.rating}"
+        puts "Director: #{movie.director}"
         puts ""
         puts "Description: #{movie.description}"
         
