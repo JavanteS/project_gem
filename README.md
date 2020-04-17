@@ -19,6 +19,10 @@ Built with
 
 	Visual Studio Code
 	Ubuntu
+	
+Contributing
+
+    Please see Code of Conduct file for details. 
 
 License
 
