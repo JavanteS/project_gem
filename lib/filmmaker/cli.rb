@@ -19,7 +19,7 @@ class Cli
             
             else 
                 puts ""
-                puts "Sorry, invalid entry.  Please, try again"
+                puts "Sorry, invalid entry.  Please, try again".red
             
             end
                 puts ""
@@ -31,14 +31,14 @@ class Cli
 
 
     def prompt
-        puts "Hello! Welcome to Studio Ghibli."
+        puts "Hello! Welcome to Studio Ghibli.".green
         puts "Please type 'films' to see Studio Ghibli's films."
         puts "Type 'exit' to leave the app"
     end 
 
     def prompt_two
         puts ""
-        puts "Here is the list of Studio Ghibli's films"
+        puts "Here is the list of Studio Ghibli's films".green
         puts "-------------------"
     end 
 
