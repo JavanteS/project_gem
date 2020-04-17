@@ -15,15 +15,10 @@ class Cli
              
                   movie = Movie.find_info_by_number(input)
                   list_info(movie)
-                  
-             
-            
             else 
                 puts ""
-                puts "Sorry, invalid entry.  Please, try again".red
-            
+                puts "Sorry, invalid entry.  Please, try again.".red
             end
-                
                 puts ""
                 puts "Pick a number to read the movie's description. To see the list of films again, type 'films'. Type 'exit' to leave.".green
                 input = gets.strip.downcase
@@ -45,8 +40,6 @@ class Cli
     end 
 
     def list_movies
-        
-        #sorted.each.with_index(1) { |movie, index| puts "#{index}. #{movie.name}"}
         Movie.all.each.with_index(1) do |movie, index| 
                 puts "#{index}. #{movie.name}"
          end 
@@ -54,14 +47,13 @@ class Cli
 
     def list_info(movie)
         puts ""
-        puts "Title: #{movie.name}"
+        puts "Title: #{movie.name}".cyan
         puts "Release date: #{movie.year}"
         puts "Rating: #{movie.rating}"
         puts "Director: #{movie.director}"
         puts "______________________________"
         puts ""
         puts "Description: #{movie.description}"
-        
         puts "______________________________"
     end 
     
